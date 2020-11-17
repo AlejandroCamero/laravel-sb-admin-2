@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\menuAdmin;
+use App\Admin;
 
-class menuAdminController extends Controller
+class AdminController extends Controller
 {
     public function index()
     {
-        return view('menuAdmin');
+        return view('Admin');
     }
 }

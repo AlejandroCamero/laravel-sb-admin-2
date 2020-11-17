@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('menuAdmin');
 });
 
 
@@ -34,4 +34,4 @@ Route::resource('modules', 'ModuleController');
 
 Route::resource('cce', 'CeController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'AdminController@index')->name('home');
