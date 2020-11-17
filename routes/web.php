@@ -25,7 +25,7 @@ Auth::routes();
 Route::resource('worksheets', 'WorksheetController');
 Route::resource('assistances', 'AssistanceController');
 Route::resource('menuAlumno', 'menuAlumnoController');
-Route::resource('menuAdmin', 'menuAdminController');
+Route::resource('Admin', 'AdminController');
 Route::resource('menuTutorE', 'menuTutorEController');
 
 
