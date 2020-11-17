@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('menuAdmin');
+    return view('Admin');
 });
 
 
