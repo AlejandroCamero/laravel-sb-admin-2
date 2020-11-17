@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,17 +19,10 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $users = User::count();
-
-        $widget = [
-            'users' => $users,
-            //...
-        ];
-
-        return view('home', compact('widget'));
+        return view('home');
     }
 }
