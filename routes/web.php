@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('menuAdmin');
+    return view('auth.login');
 });
 
 
@@ -25,7 +25,7 @@ Auth::routes();
 Route::resource('worksheets', 'WorksheetController');
 Route::resource('assistances', 'AssistanceController');
 Route::resource('menuAlumno', 'menuAlumnoController');
-Route::resource('Admin', 'AdminController');
+Route::resource('admin', 'AdminController');
 Route::resource('menuTutorE', 'menuTutorEController');
 
 
@@ -34,4 +34,5 @@ Route::resource('modules', 'ModuleController');
 
 Route::resource('cce', 'CeController');
 
-Route::get('/home', 'AdminController@index')->name('home');
+
+Route::get('/home', 'HomeController@index')->name('home');
