@@ -12,11 +12,9 @@
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('admin');
-=======
+
     return view('auth.login');
->>>>>>> b8987d9a6389899c3ee563a13681111faeba65bc
+
 });
 
 
