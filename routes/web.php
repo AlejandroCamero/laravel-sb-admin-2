@@ -12,13 +12,8 @@
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-
     return view('auth.login');
 
-=======
-    return view('auth.login');
->>>>>>> c4a153a88c7629c9b3ff6d1659167a1721ac2077
 });
 
 
