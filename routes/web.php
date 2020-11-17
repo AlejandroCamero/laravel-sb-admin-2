@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,16 +12,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
+
+Route::resource('cycles', 'CycleController');
+Route::resource('enterprises', 'EnterpriseController');
+
+Route::resource('users', 'UserController');
 Auth::routes();
 
+Route::resource('worksheets', 'WorksheetController');
+Route::resource('assistances', 'AssistanceController');
+Route::resource('menuAlumno', 'menuAlumnoController');
+Route::resource('menuAdmin', 'menuAdminController');
+Route::resource('menuTutorE', 'menuTutorEController');
+
+
+Route::resource('tasks', 'TaskController');
+Route::resource('modules', 'ModuleController');
+
+Route::resource('cce', 'CeController');
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::put('/profile', 'ProfileController@update')->name('profile.update');
-
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
