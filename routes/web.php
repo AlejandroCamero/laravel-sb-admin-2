@@ -12,11 +12,7 @@
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('admin');
-=======
     return view('auth.login');
->>>>>>> b8987d9a6389899c3ee563a13681111faeba65bc
 });
 
 
@@ -24,6 +20,7 @@ Route::resource('cycles', 'CycleController');
 Route::resource('enterprises', 'EnterpriseController');
 
 Route::resource('users', 'UserController');
+Auth::routes();
 
 Route::resource('worksheets', 'WorksheetController');
 Route::resource('assistances', 'AssistanceController');
