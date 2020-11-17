@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('Admin');
+    return view('admin');
 });
 
 
@@ -20,7 +20,6 @@ Route::resource('cycles', 'CycleController');
 Route::resource('enterprises', 'EnterpriseController');
 
 Route::resource('users', 'UserController');
-Auth::routes();
 
 Route::resource('worksheets', 'WorksheetController');
 Route::resource('assistances', 'AssistanceController');
